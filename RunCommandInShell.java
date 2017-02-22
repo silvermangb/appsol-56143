@@ -100,7 +100,7 @@ public class RunCommandInShell {
 		RunCommandInShell rcis = new RunCommandInShell();
 
 		java.util.ArrayList<String[]> rces = new java.util.ArrayList<String[]>();
-		String[] p = { "p", "./cmd.py " };
+		String[] p = { "p", "./bin/cmd.py " };
 		rces.add(p);
 		String[] j = { "j", "/usr/bin/java -cp bin Command " };
 		rces.add(j);
@@ -119,6 +119,7 @@ public class RunCommandInShell {
 			cmds.add("/bin/ls ; " + rce_cmd + rce_type + "6X");
 			cmds.add("/bin/ls ; " + rce_cmd + rce_type + "7X");
 			cmds.add(rce_cmd + rce_type + "8lX " + " ; " + rce_cmd + rce_type + "8rX");
+			cmds.add(rce_cmd + rce_type + "9lX" + " && " + rce_cmd + rce_type + "9rX");
 			for (int i = 0; i < cmds.size(); ++i) {
 				case_number += 1;
 				String cmd = cmds.get(i);
